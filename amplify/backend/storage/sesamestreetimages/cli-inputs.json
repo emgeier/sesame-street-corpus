@@ -1,0 +1,16 @@
+{
+  "resourceName": "sesamestreetimages",
+  "policyUUID": "841d15b4",
+  "bucketName": "sesamestreetimages",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

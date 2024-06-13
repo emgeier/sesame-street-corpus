@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sesamestreetcorpus-dev-7a873-authRole",
+      "UnauthRoleArn": "arn:aws:iam::555751041262:role/amplify-sesamestreetcorpus-dev-7a873-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::555751041262:role/amplify-sesamestreetcorpus-dev-7a873-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sesamestreetcorpus-dev-7a873-deployment",
+      "UnauthRoleName": "amplify-sesamestreetcorpus-dev-7a873-unauthRole",
+      "StackName": "amplify-sesamestreetcorpus-dev-7a873",
+      "StackId": "arn:aws:cloudformation:us-east-1:555751041262:stack/amplify-sesamestreetcorpus-dev-7a873/0f1d7480-28f2-11ef-9167-0e061d9ee8af",
+      "AmplifyAppId": "duogdqclgsrrz"
+    },
+    "categories": {
+      "auth": {
+        "sesamestreetcorpus6fd64801": {}
+      },
+      "storage": {
+        "SSAMetadata": {},
+        "sesamestreetimages": {}
+      },
+      "api": {
+        "sesamestreetcorpus": {}
+      }
+    }
+  }
+}

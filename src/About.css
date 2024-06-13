@@ -1,0 +1,31 @@
+/* src/About.css */
+.dot-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+
+.dot-separator::before {
+    content: '•';
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+.about {
+    text-align: center;
+    width: 100%;
+    padding-top: 100px; /* Adjust based on the height of the navbar */
+  }  
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }  
+.intro {
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+}   

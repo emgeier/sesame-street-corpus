@@ -1,0 +1,14 @@
+{
+  "resourceName": "SSAMetadata",
+  "tableName": "SSAMetadata",
+  "partitionKey": {
+    "fieldName": "category",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "image_id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
