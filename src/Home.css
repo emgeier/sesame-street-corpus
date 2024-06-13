@@ -16,6 +16,18 @@
     width: 100%;
     padding-top: 50px; /* Adjust based on the height of the navbar */
   }
-  
-
-    
+.sesame-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }  
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }  
+ .indented {
+  margin-left: 120px;
+  margin-right: 120px;
+ }   

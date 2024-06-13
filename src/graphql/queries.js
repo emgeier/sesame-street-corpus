@@ -11,9 +11,9 @@ export const getSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
       __typename
     }
   }
@@ -33,9 +33,9 @@ export const listSSImageMetadata = /* GraphQL */ `
         episode
         time_in_episode
         attribute
+        restricted
         createdAt
         updatedAt
-        owner
         __typename
       }
       nextToken

@@ -1,5 +1,27 @@
 {
   "api": {
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "sesamestreetcorpus6fd64801"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesffe48829"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "sesamestreetcorpus": {
       "dependsOn": [
         {
@@ -37,7 +59,26 @@
   "auth": {
     "sesamestreetcorpus6fd64801": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -60,6 +101,151 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID"
+          ],
+          "category": "auth",
+          "resourceName": "sesamestreetcorpus6fd64801"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "AdminQueriesffe48829": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "sesamestreetcorpus6fd64801"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sesamestreetcorpus6fd64801CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sesamestreetcorpus6fd64801PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_AdminQueriesffe48829_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesffe48829"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesffe48829_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesffe48829"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801PostConfirmation_GROUP": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_sesamestreetcorpus6fd64801PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sesamestreetcorpus6fd64801PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
     }
   },
   "storage": {

@@ -1,26 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Home from './Home';
 import About from './About';
 import Navbar from './Navbar';
 import Admin from './Admin';
-// import Search from './Search';
+import Search from './Search';
+
 import { Amplify } from 'aws-amplify';
-import awsconfig from './aws-exports';
+//old version of config, still exists in files
+//import awsconfig from './aws-exports';
+
+import config from './amplifyconfiguration.json';
 
 import './App.css'
-import { Authenticator } from '@aws-amplify/ui-react';
-import { signOut } from 'aws-amplify/auth';
+import { Authenticator, withAuthenticator } from '@aws-amplify/ui-react';
+import { signOut, signIn, signUp } from 'aws-amplify/auth';
+
+Amplify.configure(config);
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Authenticator>
-      {(signOut, user)=>(
+    <div>
+      <button onClick={signUp}>Sign Up</button>
+    
+    {/* <Authenticator>
+      {(signOut, user)=>( */}
             <>
             <div>
  
@@ -31,15 +39,17 @@ function App() {
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/search" element={<Search />} />
                   </Routes>
               </div>
             </Router>
-  
+            <div><button onClick={signOut}>Sign Out</button></div>
           </>
-      )}
-     </Authenticator>
+      {/* )} */}
+   {/* </div>  </Authenticator> */}
+     </div>
 
   )
 }
 
-export default App
+export default withAuthenticator(App)

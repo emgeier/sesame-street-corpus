@@ -9,18 +9,45 @@
       "UnauthRoleName": "amplify-sesamestreetcorpus-dev-7a873-unauthRole",
       "StackName": "amplify-sesamestreetcorpus-dev-7a873",
       "StackId": "arn:aws:cloudformation:us-east-1:555751041262:stack/amplify-sesamestreetcorpus-dev-7a873/0f1d7480-28f2-11ef-9167-0e061d9ee8af",
-      "AmplifyAppId": "duogdqclgsrrz"
+      "AmplifyAppId": "duogdqclgsrrz",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-sesamestreetcorpus-dev-7a873-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
-        "sesamestreetcorpus6fd64801": {}
+        "sesamestreetcorpus6fd64801": {},
+        "userPoolGroups": {}
       },
       "storage": {
         "SSAMetadata": {},
         "sesamestreetimages": {}
       },
       "api": {
-        "sesamestreetcorpus": {}
+        "sesamestreetcorpus": {},
+        "AdminQueries": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "duogdqclgsrrz",
+          "type": "cicd"
+        }
+      },
+      "function": {
+        "sesamestreetcorpus6fd64801CustomMessage": {
+          "REDIRECTURL": "https://main.duogdqclgsrrz.amplifyapp.com/",
+          "EMAILSUBJECT": "account confirmation",
+          "EMAILMESSAGE": "",
+          "deploymentBucketName": "amplify-sesamestreetcorpus-dev-7a873-deployment",
+          "s3Key": "amplify-builds/sesamestreetcorpus6fd64801CustomMessage-4259485875496b613550-build.zip"
+        },
+        "sesamestreetcorpus6fd64801PostConfirmation": {
+          "GROUP": "Admin",
+          "deploymentBucketName": "amplify-sesamestreetcorpus-dev-7a873-deployment",
+          "s3Key": "amplify-builds/sesamestreetcorpus6fd64801PostConfirmation-59656d6f597673635472-build.zip"
+        },
+        "AdminQueriesffe48829": {
+          "deploymentBucketName": "amplify-sesamestreetcorpus-dev-7a873-deployment",
+          "s3Key": "amplify-builds/AdminQueriesffe48829-484c4577527249724848-build.zip"
+        }
       }
     }
   }
