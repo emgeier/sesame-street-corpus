@@ -1,0 +1,16 @@
+{
+  "trigger": true,
+  "modules": [
+    "add-to-group"
+  ],
+  "parentResource": "sesamestreetcorpus6fd64801",
+  "functionName": "sesamestreetcorpus6fd64801PostConfirmation",
+  "resourceName": "sesamestreetcorpus6fd64801PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/amplify-cli/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "sesamestreetcorpus6fd64801PostConfirmation",
+  "skipEdit": true
+}

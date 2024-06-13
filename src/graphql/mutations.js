@@ -14,29 +14,9 @@ export const createSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
-      __typename
-    }
-  }
-`;
-export const deleteSSImageMetadata = /* GraphQL */ `
-  mutation DeleteSSImageMetadata(
-    $input: DeleteSSImageMetadataInput!
-    $condition: ModelSSImageMetadataConditionInput
-  ) {
-    deleteSSImageMetadata(input: $input, condition: $condition) {
-      id
-      category
-      annotation
-      date
-      episode
-      time_in_episode
-      attribute
-      createdAt
-      updatedAt
-      owner
       __typename
     }
   }
@@ -54,9 +34,29 @@ export const updateSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
+      __typename
+    }
+  }
+`;
+export const deleteSSImageMetadata = /* GraphQL */ `
+  mutation DeleteSSImageMetadata(
+    $input: DeleteSSImageMetadataInput!
+    $condition: ModelSSImageMetadataConditionInput
+  ) {
+    deleteSSImageMetadata(input: $input, condition: $condition) {
+      id
+      category
+      annotation
+      date
+      episode
+      time_in_episode
+      attribute
+      restricted
+      createdAt
+      updatedAt
       __typename
     }
   }

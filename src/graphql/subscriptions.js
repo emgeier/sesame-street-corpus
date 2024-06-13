@@ -4,9 +4,8 @@
 export const onCreateSSImageMetadata = /* GraphQL */ `
   subscription OnCreateSSImageMetadata(
     $filter: ModelSubscriptionSSImageMetadataFilterInput
-    $owner: String
   ) {
-    onCreateSSImageMetadata(filter: $filter, owner: $owner) {
+    onCreateSSImageMetadata(filter: $filter) {
       id
       category
       annotation
@@ -14,9 +13,9 @@ export const onCreateSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
       __typename
     }
   }
@@ -24,9 +23,8 @@ export const onCreateSSImageMetadata = /* GraphQL */ `
 export const onUpdateSSImageMetadata = /* GraphQL */ `
   subscription OnUpdateSSImageMetadata(
     $filter: ModelSubscriptionSSImageMetadataFilterInput
-    $owner: String
   ) {
-    onUpdateSSImageMetadata(filter: $filter, owner: $owner) {
+    onUpdateSSImageMetadata(filter: $filter) {
       id
       category
       annotation
@@ -34,9 +32,9 @@ export const onUpdateSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
       __typename
     }
   }
@@ -44,9 +42,8 @@ export const onUpdateSSImageMetadata = /* GraphQL */ `
 export const onDeleteSSImageMetadata = /* GraphQL */ `
   subscription OnDeleteSSImageMetadata(
     $filter: ModelSubscriptionSSImageMetadataFilterInput
-    $owner: String
   ) {
-    onDeleteSSImageMetadata(filter: $filter, owner: $owner) {
+    onDeleteSSImageMetadata(filter: $filter) {
       id
       category
       annotation
@@ -54,9 +51,9 @@ export const onDeleteSSImageMetadata = /* GraphQL */ `
       episode
       time_in_episode
       attribute
+      restricted
       createdAt
       updatedAt
-      owner
       __typename
     }
   }
