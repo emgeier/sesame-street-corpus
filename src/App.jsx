@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <button onClick={signUp}>Sign Up</button>
+      
     
     {/* <Authenticator>
       {(signOut, user)=>( */}
@@ -43,7 +43,7 @@ function App() {
                   </Routes>
               </div>
             </Router>
-            <div><button onClick={signOut}>Sign Out</button></div>
+            
           </>
       {/* )} */}
    {/* </div>  </Authenticator> */}

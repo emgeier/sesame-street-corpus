@@ -62,20 +62,5 @@ html, body, #root {
 .App {
   text-align: center;
   width: 100%;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body, #root {
-  height: 100%;
-  width: 100%;
-}
-
-.App {
-  text-align: center;
-  width: 100%;
-  padding-top: 500px; /* Adjust based on the height of the navbar */
+  padding-top: 600px; /* Adjust based on the height of the navbar */
 }

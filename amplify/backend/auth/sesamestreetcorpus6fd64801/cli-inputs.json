@@ -1,6 +1,8 @@
 {
   "version": "1",
   "cognitoConfig": {
+    "identityPoolName": "sesamestreetcorpusbd7de02a_identitypool_bd7de02a",
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "sesame6fd64801",
     "userPoolName": "sesamestreetcorpus6fd64801_userpool_6fd64801",
     "autoVerifiedAttributes": [
@@ -33,7 +35,7 @@
     "userpoolClientSetAttributes": false,
     "sharedId": "6fd64801",
     "resourceName": "sesamestreetcorpus6fd64801",
-    "authSelections": "userPoolOnly",
+    "authSelections": "identityPoolAndUserPool",
     "useDefault": "manual",
     "usernameAttributes": [
       "email"
@@ -47,7 +49,8 @@
       ]
     },
     "userPoolGroupList": [
-      "Admin"
+      "Admin",
+      "Guest"
     ],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
@@ -97,6 +100,7 @@
     "permissions": [
       "{\n  \"policyName\": \"AddToGroupCognito\",\n  \"trigger\": \"PostConfirmation\",\n  \"effect\": \"Allow\",\n  \"actions\": [\n    \"cognito-idp:AdminAddUserToGroup\",\n    \"cognito-idp:GetGroup\",\n    \"cognito-idp:CreateGroup\"\n  ],\n  \"resource\": {\n    \"paramType\": \"!GetAtt\",\n    \"keys\": [\n      \"UserPool\",\n      \"Arn\"\n    ]\n  }\n}"
     ],
-    "authProviders": []
+    "authProviders": [],
+    "thirdPartyAuth": false
   }
 }

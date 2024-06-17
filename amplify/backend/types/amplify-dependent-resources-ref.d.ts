@@ -15,9 +15,15 @@ export type AmplifyDependentResourcesAttributes = {
     "sesamestreetcorpus6fd64801": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
+      "IdentityPoolId": "string",
+      "IdentityPoolName": "string",
       "UserPoolArn": "string",
       "UserPoolId": "string",
       "UserPoolName": "string"
+    },
+    "userPoolGroups": {
+      "AdminGroupRole": "string",
+      "GuestGroupRole": "string"
     }
   },
   "function": {

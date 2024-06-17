@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+  }
+  .search-box {
+    text-align: center;
+    width: 100%;
+    padding-top: 800px; /* Adjust based on the height of the navbar */
+  }
+  .input-container {
+    width: 30%;
+    padding-top: 500px;
+  }
+  .page-container {
+    height: 100%;
+    width: 100%;
+  }
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }  
